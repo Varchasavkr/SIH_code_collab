@@ -1,22 +1,28 @@
 import React, { useEffect, useState } from "react";
 import { useFetcher } from "react-router-dom";
+import Logo from "../images/Logo.png";
 const Navbar = () => {
   return (
-    <div className="w-90 h-20 rounded-full bg-gradient-to-r from-purple-200 via-purple-300 to-purple-500 p-5 flex justify-around">
-      <div className="h-auto w-50">
-        <img
-          scr="../images/Logo.png"
-          className="h-auto max-w-full"
-          alt="logo"
-        />
-      </div>
-      <div className="flex justify-around">
-        <button className="rounded-full w-20 h-10 mx-2 bg-[#6941E1]">
-          Login
-        </button>
-        <button className="rounded-full w-20 h-10 mx-2 bg-[#AD1AED]">
-          Register
-        </button>
+    <div className="relative w-full h-auto p-3">
+      <div className="absolute w-[88rem] h-15 rounded-full bg-gradient-to-r from-purple-100 via-purple-150 to-purple-300 p-5 flex justify-between shadow-2xl">
+        <div>
+          <img
+            className="object-fit absolute top-[1rem]"
+            width="200rem"
+            height="500rem"
+            src={Logo}
+            alt="logo"
+          />
+        </div>
+        <div></div>
+        <div className="flex justify-around">
+          <button className="rounded-full text-[#EDE3FB] w-20 h-8 mx-3 bg-[#6941E1]">
+            Login
+          </button>
+          <button className="rounded-full text-[#EDE3FB]  w-20 h-8 mx-2 bg-[#AD1AED]">
+            Register
+          </button>
+        </div>
       </div>
     </div>
   );

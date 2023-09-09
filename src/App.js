@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 function App() {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Routes>
         <Route path="/" Component={Landing} exact />
       </Routes>
