@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
+// import Lofo
 import Navbar from "./Navbar";
 import { Outlet } from "react-router-dom";
 import logo from '../images/main_face.svg'
 const Landing = () => {
   return (
-    <div className="overflow-x-hidden w-screen h-screen bg-[#EDE3FB]">
-      {/* <Navbar/> */}
+    <div className="overflow-x-hidden w-screen h-screen bg-[#EDE3FB] z-[-1]">
+      <Navbar/>
       <div className="flex">
         <div className="">
-          <img src={logo} alt="face" className="w-[45rem] h-[45rem] absolute left-[-8rem] " />
+          <img src={logo} alt="face" className="w-[45rem] h-[45rem] absolute left-[-8rem] z-1" />
         </div>
         <div className="relative">
           <div className=" absolute left-[42rem] top-[11rem] w-[45rem] h-[25rem] font-Inter">
