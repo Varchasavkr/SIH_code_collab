@@ -1,41 +1,55 @@
-import React, { useEffect, useState } from "react";
-// import Lofo
+import React from "react";
 import Navbar from "./Navbar";
-import { Outlet } from "react-router-dom";
 import logo from "../images/main_face.svg";
+import { useTypewriter } from 'react-simple-typewriter'
+
+const MyComponent = () => {
+  const [text] = useTypewriter({
+    words: ["Celebrate your Press Release!!",],
+    loop: 0
+  })
+
+  return (
+    <div className="">
+    <p className="font-bold text-7xl absolute left-[3rem] text-[#6941E1] leading-[5.295rem]">
+      <span>{text}</span>
+      </p>
+    </div>
+   
+  )
+}
+
 const Landing = () => {
   return (
-    <div className="overflow-x-hidden w-screen h-screen bg-[#EDE3FB] z-[-1]">
+    <div className="w-screen h-screen bg-[#EDE3FB] z-[-1]">
       <Navbar />
       <div className="flex">
         <div className="">
           <img
             src={logo}
             alt="face"
-            className="w-[45rem] h-[52rem] absolute top-[-1rem] left-[-8rem] z-1"
+            className="w-[48.6%] h-[103%] absolute top-[-3%] left-[-10%] z-1"
           />
         </div>
         <div className="relative">
-          <div className=" absolute left-[42rem] top-[11rem] w-[45rem] h-[25rem] font-Inter">
-            <p className="font-bold text-[4.375rem] text-[#6941E1] leading-[5.295rem]">
-              Celebrate Your Press
-            </p>
-            <p className="font-bold text-7xl absolute left-[10rem] text-[#6941E1] leading-[5.295rem]">
+          <div className=" absolute left-[40rem] top-[11rem] w-[55rem] h-[25rem] font-Inter">
+            {MyComponent()}
+            {/* <p className="font-bold text-7xl absolute left-[10rem] text-[#6941E1] leading-[5.295rem]">
               Releases!!
-            </p>
-            <p className="absolute font-medium top-[12.5rem] left-[10rem] text-[2.5rem]">
+            </p> */}
+            <p className="absolute font-medium top-[45%] left-[18%] text-[250%]">
               From Script2Screen
             </p>
-            <p className="absolute top-[15.625rem] left-[7.4rem] text-[2.5rem] font-medium">
+            <p className="absolute top-[60%] left-[14%] text-[250%] font-medium">
               Your Story Comes Alive!
             </p>
-            <p className="absolute top-[18.625rem] left-[3.8rem] text-[1.8rem] font-light">
+            <p className="absolute top-[75%] left-[8%] text-[179%] font-light">
               The easiest way to turn text into video with
             </p>
-            <p className="absolute top-[10.625rem] left-[41rem] text-[9rem] font-bold text-[#6941E1]">
+            <p className="absolute top-[67%] left-[75%] text-[374%] font-bold text-[#AD1AED]">
               AI
             </p>
-            <button className="absolute top-[23.875rem] left-[16.5rem] w-[10rem] h-[3rem] text-[1.75rem] text-[#EDE3FB] rounded-lg bg-[#AD1AED]">
+            <button className="absolute top-[95%] left-[36%] w-[17%] h-[13%] text-[150%] text-[#EDE3FB] rounded-lg bg-[#AD1AED]">
               Try Here!
             </button>
           </div>
