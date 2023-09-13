@@ -1,0 +1,7 @@
+.textarea{
+    resize: none;
+}
+.textarea:focus {
+    
+    color:#6941E1
+}
