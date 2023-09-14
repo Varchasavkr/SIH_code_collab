@@ -1,23 +1,22 @@
 import React from "react";
 import Navbar from "./Navbar";
 import logo from "../images/main_face.svg";
-import { useTypewriter } from 'react-simple-typewriter'
+import { useTypewriter } from "react-simple-typewriter";
 
 const MyComponent = () => {
   const [text] = useTypewriter({
-    words: ["Celebrate your Press Release!!",],
-    loop: 0
-  })
+    words: ["Visualize your Press Release!!"],
+    loop: 0,
+  });
 
   return (
     <div className="">
-    <p className="font-bold text-7xl absolute left-[3rem] text-[#6941E1] leading-[5.295rem]">
-      <span>{text}</span>
+      <p className="font-bold text-7xl absolute left-[3rem] text-[#6941E1] leading-[5.295rem]">
+        <span>{text}</span>
       </p>
     </div>
-   
-  )
-}
+  );
+};
 
 const Landing = () => {
   return (
@@ -41,7 +40,7 @@ const Landing = () => {
               From Script2Screen
             </p>
             <p className="absolute top-[60%] left-[14%] text-[250%] font-medium">
-              Your Story Comes Alive!
+              Your News Comes Alive!
             </p>
             <p className="absolute top-[75%] left-[8%] text-[179%] font-light">
               The easiest way to turn text into video with
