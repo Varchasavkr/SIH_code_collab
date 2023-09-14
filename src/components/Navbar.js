@@ -3,14 +3,17 @@ import { useFetcher } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 // import { Link, useHistory } from "react-router-dom";
 import Logo from "../images/Logo.png";
-import Vector from "../images/Vector.png";
+import VectorKM from "../images/VectorKM.png";
 const Navbar = ({ isLoggedIn }) => {
   const navigate = useNavigate();
-  const handleLogin = () => {
+  const handleAdmin = () => {
     navigate("/admin");
   };
   const handleLogout = () => {
     navigate("/");
+  };
+  const handleUser = () => {
+    navigate("/User");
   };
   return (
     <div className="relative w-full h-auto p-[1%] z-10">
@@ -33,18 +36,21 @@ const Navbar = ({ isLoggedIn }) => {
             >
               Logout
             </button>
-            <img width="20%" height="20%" src={Vector} alt="logo" />
+            <img width="20%" height="20%" src={VectorKM} alt="logo" />
           </div>
         ) : (
           <div className="flex justify-around">
             <button
               className="rounded-full text-[#EDE3FB] w-20 h-[120%] mx-3 bg-[#6941E1]"
-              onClick={handleLogin}
+              onClick={handleAdmin}
             >
-              Login
+              Admin
             </button>
-            <button className="rounded-full text-[#EDE3FB]  w-20 h-[120%] mx-2 bg-[#AD1AED]">
-              Register
+            <button
+              className="rounded-full text-[#EDE3FB]  w-20 h-[120%] mx-2 bg-[#AD1AED]"
+              onClick={handleUser}
+            >
+              User
             </button>
           </div>
         )}
