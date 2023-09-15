@@ -9,7 +9,12 @@ import overimage5 from "../images/Vector (5).png";
 import overimage6 from "../images/Vector (6).png";
 import overimage7 from "../images/Vector (7).png";
 import Navbar from "./Navbar";
+import { useNavigate } from "react-router-dom";
 export default function User() {
+  const navigate = useNavigate();
+  const handleVideo = () => {
+    navigate("/video");
+  };
   return (
     <div className="bg-[#EDE3FB] w-screen h-screen">
       <Navbar isLoggedIn />
@@ -114,7 +119,10 @@ export default function User() {
           rows="10"
           className=" mx-auto w-[70%] border-2 border-[#B7A1F0] bg-[#EDE3FB] rounded-lg textarea h-[3rem] mt-[1%] focus:outline-none focus:ring focus:ring-violet-500"
         ></textarea>
-        <button className=" bg-[#6941E1] w-[12%] h-[3rem] mx-auto font-medium mt-[2%] text-[#EDE3FB] text-[110%] rounded-lg">
+        <button
+          className=" bg-[#6941E1] w-[12%] h-[3rem] mx-auto font-medium mt-[2%] text-[#EDE3FB] text-[110%] rounded-lg"
+          onClick={handleVideo}
+        >
           Generate video
         </button>
       </div>
